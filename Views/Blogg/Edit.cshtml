@@ -1,0 +1,52 @@
+﻿@model RecipeApp.Models.Blogg
+
+@{
+    ViewData["Title"] = "Ändra";
+}
+
+<h2 class="margin-bottom-20">Ändra blogginlägg</h2>
+    
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BloggId" />
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BloggPost" class="control-label"></label>
+                @*<input asp-for="BloggPost" class="form-control" />*@
+                @Html.TextAreaFor(m => m.BloggPost, new { @class = "form-control", @rows = "8" })
+                <span asp-validation-for="BloggPost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                @Html.DropDownListFor(m => m.Category,
+                new SelectList(Enum.GetValues(typeof(Categories))),
+                "Välj kategori")
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="hide">
+                <label asp-for="CreatedDate" class="hide"></label>
+                <input asp-for="CreatedDate" class="hide" />
+                <span asp-validation-for="CreatedDate" class="hide"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Spara" class="btn btn-primary form-control btn-form" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

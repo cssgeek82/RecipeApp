@@ -1,0 +1,57 @@
+﻿@model RecipeApp.Models.Blogg
+
+@{
+    ViewData["Title"] = "Detalj";
+}
+
+    <h1>Detaljer</h1>
+
+    <div>
+        <dl class="row">
+            <dt>
+                <span class="bold">
+                    @Html.DisplayNameFor(model => model.Author)
+                </span>
+            </dt>
+            <dd class="details-info">
+                @Html.DisplayFor(model => model.Author)
+            </dd>
+            <dt>
+                <span class="bold">
+                    @Html.DisplayNameFor(model => model.Title)
+                </span>
+            </dt>
+            <dd class="details-info">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                <span class="bold">
+                    @Html.DisplayNameFor(model => model.BloggPost)
+                </span>
+            </dt>
+            <dd class="details-info">
+                @Html.DisplayFor(model => model.BloggPost)
+            </dd>
+            <dt>
+                <span class="bold">
+                    @Html.DisplayNameFor(model => model.Category)
+                </span>
+            </dt>
+            <dd class="details-info">
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+            <dt>
+                <span class="bold">
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </span>
+            </dt>
+            <dd class="details-info">
+                @Html.DisplayFor(model => model.CreatedDate.Day)/@Html.DisplayFor(model => model.CreatedDate.Month) @Html.DisplayFor(model => model.CreatedDate.Year)
+            </dd>
+        </dl>
+    </div>
+    <div class="blogg-btns">
+        <a asp-action="Edit" asp-route-id="@Model.BloggId" class="btn edit-btn">Redigera</a>
+        <a asp-action="Index" class="btn details-btn">Tillbaka</a>
+    </div>
+

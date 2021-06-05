@@ -1,0 +1,25 @@
+﻿@model IEnumerable<RecipeApp.Models.Blogg>
+@{
+    ViewData["Title"] = "Blogginlägg";
+}
+
+
+        
+@foreach (var item in Model)
+{
+<div class="readposts">
+
+    <h2 class="center">
+        @Html.DisplayFor(modelItem => item.Title)
+    </h2>
+    <p class="center italic"> @Convert.ToString(string.Format("{0:yyyy/MM/dd}", item.CreatedDate))</p>
+    <p class="bloggpost">
+        @Html.DisplayFor(modelItem => item.BloggPost)
+    </p>
+    <p>
+        <span class="bold">Kategori: </span> @Html.DisplayFor(modelItem => item.Category)
+        <span class="bold">Av: </span> @Html.DisplayFor(modelItem => item.Author)
+    </p>
+</div>
+}
+ 

@@ -1,0 +1,63 @@
+﻿@model RecipeApp.Models.Blogg
+
+@{
+    ViewData["Title"] = "Radera";
+}
+
+
+<h1>Radera</h1>
+
+<h3>Är du säker på att du vill ta bort det här blogginlägget?</h3>
+<div>
+    <dl class="row">
+        <dt>
+            <span class="bold">
+                @Html.DisplayNameFor(model => model.Author)
+            </span>
+        </dt>
+        <dd class="details-info">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt>
+            <span class="bold">
+                @Html.DisplayNameFor(model => model.Title)
+            </span>
+        </dt>
+        <dd class="details-info">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            <span class="bold">
+                @Html.DisplayNameFor(model => model.BloggPost)
+            </span>
+        </dt>
+        <dd class="details-info">
+            @Html.DisplayFor(model => model.BloggPost)
+        </dd>
+        <dt>
+            <span class="bold">
+                @Html.DisplayNameFor(model => model.Category)
+            </span>
+        </dt>
+        <dd class="details-info">
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt>
+            <span class="bold">
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </span>
+        </dt>
+        <dd class="details-info">
+            @Html.DisplayFor(model => model.CreatedDate.Day)/@Html.DisplayFor(model => model.CreatedDate.Month) @Html.DisplayFor(model => model.CreatedDate.Year)
+        </dd>
+    </dl>
+
+
+    <div class="blogg-btns">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="BloggId" />
+            <input type="submit" value="Radera" class="btn del-btn" />
+            <a asp-action="Index" class="btn details-btn">Ångra</a>
+        </form>
+    </div>
+</div>

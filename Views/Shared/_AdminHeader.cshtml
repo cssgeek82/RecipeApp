@@ -1,0 +1,15 @@
+﻿@{
+}
+<header class="mainheader headerback">
+    <nav class="mainnav" id="mainnav">
+        <ul class="pagenav">
+            <li class="hidebig"><a href="javascript:void(0)" class="closebtn hidebig" onclick="closeNav()">&times;</a></li>
+            <li class="mainli"><a asp-controller="Blogg" asp-action="Admin">Admin</a></li>
+            <li class="mainli"><a asp-controller="Blogg" asp-action="Create">Skapa inlägg</a></li>
+            <li class="mainli"><a asp-controller="Blogg" asp-action="Index">Redigera inlägg</a></li>
+            <li class="mainli"><a asp-controller="Post" asp-action="Index">Se inlägg</a></li>
+        </ul>
+        <partial name="_LoginPartial" />
+    </nav>
+    <span id="menuButton" class="hidebig" role="navigation" onclick="openNav()">&#9776;</span>
+</header>

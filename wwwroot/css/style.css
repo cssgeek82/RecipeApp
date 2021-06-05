@@ -1,0 +1,335 @@
+﻿/* Fonts */
+@media screen and (min-width: 1000px) {
+    h2 {
+        font-size: 28px;
+        margin-top: 25px;
+        color: #251274;
+    }
+    h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 999px) {
+    h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: #251274;
+    }
+    h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        margin-top: 15px;
+    }
+}
+/* Styles */
+.bold {
+    font-weight: bold; 
+}
+.center {
+    text-align: center; 
+}
+.italic {
+    font-style: italic; 
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+/* Buttons and links */
+.btn {
+    border: 0px solid #000; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #000; 
+    padding: 5px 10px;
+    color: #fff;
+    margin: 10px; 
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: none; 
+}
+.del-btn {
+    background-color: red;
+}
+.edit-btn {
+    background-color: #782c8e;
+}
+.details-btn {
+    background-color: #251274;
+}
+.btn-primary {
+    background-color: #251274;
+}
+.btn-form {
+    justify-self: end; 
+}
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.pagecontainer {
+    background-color: #e6e0f0;
+    
+}
+
+.main {
+    color: #000; 
+    padding: 20px; 
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+/* First-page (Recipe-Index) */
+.firstpage {
+    background-image: url("../images/background1.jpg");
+    height: 100%;
+    width: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;   
+    top: 0;
+    left: 0;
+}
+.firstpage-middle {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 20%;
+    background: #e6e0f0;
+}
+.quote-section {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px; 
+}
+.quote {
+    font-style: italic; 
+    text-align: center; 
+}
+.quote-author {
+    text-align: right; 
+}
+.firstpage-products {
+    margin-bottom: 40px; 
+}
+.products-row a {
+    text-decoration: none; 
+    color: #000; 
+}
+.firstpage-content {
+    position: absolute;
+    top: 120%;
+    width: 100%;
+    min-height: 500px;
+    background: #251274;
+}
+.product-heading-new {
+    text-align: center; 
+}
+.latest-products-heading {
+    color: #fff; 
+}
+@media screen and (min-width: 1000px) {
+    .firstname h1 {
+        font-size: 100px;
+        padding-top: 10%; 
+    }
+}
+@media screen and (max-width: 999px) and (min-width: 500px) {
+    .firstname h1 {
+        font-size: 3.5em;
+        padding-top: 20%;
+    }
+}
+@media screen and (max-width: 499px) {
+    .firstname h1 {
+        font-size: 2.5em;
+        padding-top: 40%;
+    }
+}
+.firstname {
+    margin: auto;
+}
+.firstname h1 {
+    color: #fff;
+    text-align: center; 
+}
+
+/* Page: Post */
+.readposts {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 2px solid #251274;
+}
+
+/* Page: Retailers */
+.retail-list {
+    list-style-type: none;
+}
+.retail-list li {
+    padding-bottom: 5px; 
+}
+    .retail-list a {
+        color: #251274;
+    }
+
+/* Page: Products */
+.products {
+    margin-top: 15px; 
+}
+.products-row {
+    display: grid;
+}
+@media screen and (min-width: 800px) {
+    .products-row {
+        grid-template-columns: 30% auto 30% auto 30%;
+        grid-template-areas: "pone . ptwo . pthree";
+    }
+    .products-row {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 799px) {
+    .products-row {
+        grid-template-columns: 100%;
+        grid-template-areas: "pone" "ptwo" "pthree";
+    }
+    .single-product {
+        margin-bottom: 10px; 
+    }
+}
+.product-one {
+    grid-area: pone; 
+}
+.product-two {
+    grid-area: ptwo;
+}
+.product-three {
+    grid-area: pthree;
+}
+
+.single-product {
+    border: 2px solid #251274;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+}
+.product-img {
+    width: 100%;
+}
+
+/* Page: Blogg-Index */
+.admin-post {
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 15px;
+}
+
+.edits-div {
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.bloggpost {
+    margin-bottom: 20px;
+    margin-top: 10px; 
+}
+/* Page Blogg-Admin */
+.admin-main p{
+    padding-bottom: 10px; 
+}
+.admin-main h2 {
+    margin-bottom: 10px; 
+}
+.admin-margin-bottom {
+    margin-bottom: 20px;
+}
+.admin-link-p {
+    background-color: #251274;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+.admin-link-p:hover {
+    background-color: #000000;
+}
+.admin-link{
+    color: #fff; 
+    text-decoration: none; 
+}
+
+/* Blogg-views */
+.form-group {
+    display: grid;
+    grid-template-columns: 120px auto 30px 300px;
+    grid-template-areas: "blabel bcontrol . bdanger";
+}
+.control-label {
+    grid-area: blabel; 
+}
+.form-control {
+    grid-area: bcontrol; 
+}
+.text-danger {
+    grid-area: bdanger;  
+    color: red; 
+}
+.control-label, .form-control {
+    margin-bottom: 20px; 
+    padding-bottom: 5px;
+    padding-top: 5px; 
+}
+.blogg-heading {
+    margin-bottom: 20px; 
+}
+
+/* Identity-views */
+.col-md-3 {
+    margin-bottom: 20px; 
+}
+.nav-pills {
+    list-style-type: none; 
+}
+.nav-item {
+    color: #251274;
+    background-color: yellow;
+    margin-bottom: 10px;
+    max-width: 150px;
+    background-color: #251274;
+    color: #ffffff;
+    padding: 10px;
+}
+.nav-item a {
+    text-decoration: none; 
+    color: #fff; 
+}
+.logout {
+    margin-top: 40px; 
+}
+
+/* Edit and Delete views */
+.blogg-btns {
+    margin-top: 40px; 
+}
+.details-info {
+    padding-left: 10px; 
+    margin-bottom: 10px; 
+}

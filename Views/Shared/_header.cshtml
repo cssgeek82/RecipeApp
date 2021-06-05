@@ -1,0 +1,21 @@
+﻿@{
+}
+<header class="mainheader headerback">
+    <nav class="mainnav" id="mainnav">
+        <ul class="pagenav">
+            <li class="hidebig"><a href="javascript:void(0)" class="closebtn hidebig" onclick="closeNav()">&times;</a></li>
+            <li class="mainli"><a asp-controller="Recipe" asp-action="Index">Startsida</a></li>
+            <li class="mainli"><a asp-controller="Recipe" asp-action="Products">Produkter</a></li>
+            <li class="mainli"><a asp-controller="Recipe" asp-action="Retailers">Återförsäljare</a></li>
+            <li class="mainli"><a asp-controller="Post" asp-action="Index">Blogg</a></li>
+        </ul>
+        <partial name="_LogPartial" />
+    </nav>
+    <span id="menuButton" class="hidebig" role="navigation" onclick="openNav()">&#9776;</span>
+
+    <div class="header-logo">
+        <a asp-controller="Recipe" asp-action="Index">
+            <img class="header-image" alt="Logo with text: Recipe for health" src="~/images/logolight.png">
+        </a>
+    </div>
+</header>

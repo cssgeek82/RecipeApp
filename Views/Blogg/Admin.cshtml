@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RecipeApp.Models.Blogg>
+
+@{
+    ViewData["Title"] = "Admin";
+}
+
+
+
+<div class="admin-main">
+    <h2>Administratörs-sida</h2>
+    <p class="admin-margin-bottom"><span class="bold">Inloggad som: </span>@User.Identity.Name</p>
+    <p>Här kan du skapa nya blogginlägg samt redigera och radera blogginlägg. </p>
+    <p>Om något inte fungerar som det ska, hör av dig till webbplats-ansvarige Lena Tibbling vardagar mellan 8.00-16.00 på: </p>
+    <p><span class="bold">Mail: </span>leti1900@student.miun.se </p>
+    <p class="admin-margin-bottom"><span class="bold">Tel: </span>070 - 123 45 67</p>
+
+    <a asp-action="Create" class="admin-link"><p class="admin-link-p">Skapa nytt blogginlägg</p></a>
+    <a asp-action="Index" class="admin-link"><p class="admin-link-p">Redigera blogginlägg</p></a>
+    <a asp-controller="Post" asp-action="Index" class="admin-link"><p class="admin-link-p">Se alla inlägg</p></a>
+    <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" class="admin-link"><p class="admin-link-p admin-margin-bottom">Min sida</p></a>
+
+</div>
+
+

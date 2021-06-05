@@ -1,0 +1,27 @@
+﻿@model IEnumerable<RecipeApp.Models.Blogg>
+
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<h2>Redigera inlägg</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+    <div class="admin-post">
+        <p><span class="bold">@Html.DisplayNameFor(model => model.Author) </span> : @Html.DisplayFor(modelItem => item.Author)</p>
+        <p><span class="bold">@Html.DisplayNameFor(model => model.Title) </span> : @Html.DisplayFor(modelItem => item.Title)</p>
+        <p>@Html.DisplayFor(modelItem => item.BloggPost)</p> 
+        <p><span class="bold">@Html.DisplayNameFor(model => model.Category) </span> : @Html.DisplayFor(modelItem => item.Category)</p>
+        <p><span class="bold">@Html.DisplayNameFor(model => model.CreatedDate) </span> : @Convert.ToString(string.Format("{0:yyyy/MM/dd}", item.CreatedDate))</p>
+        <div class="edits-div">
+            <a class="btn edit-btn" asp-action="Edit" asp-route-id="@item.BloggId">Redigera</a>
+            <a class="btn details-btn" asp-action="Details" asp-route-id="@item.BloggId">Detaljer</a>
+            <a class="btn del-btn" asp-action="Delete" asp-route-id="@item.BloggId">Radera</a>
+        </div>
+    </div> 
+    }
+</div>
+
+

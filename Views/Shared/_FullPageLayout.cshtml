@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="sv-se">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe for health : @ViewData["Title"]</title>
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="firstpage">
+            <header class="mainheader">
+                <nav class="mainnav" id="mainnav">
+                    <ul class="pagenav">
+                        <li class="hidebig"><a href="javascript:void(0)" class="closebtn hidebig" onclick="closeNav()">&times;</a></li>
+                        <li class="mainli"><a asp-controller="Recipe" asp-action="Index">Startsida</a></li>
+                        <li class="mainli"><a asp-controller="Recipe" asp-action="Products">Produkter</a></li>
+                        <li class="mainli"><a asp-controller="Recipe" asp-action="Retailers">Återförsäljare</a></li>
+                        <li class="mainli"><a asp-controller="Post" asp-action="Index">Blogg</a></li>
+                    </ul>
+                    <partial name="_LogPartial" />
+                </nav>
+                <span id="menuButton" class="hidebig" role="navigation" onclick="openNav()">&#9776;</span>
+            </header>
+
+            <div class="firstname">
+                <h1>Recipe for Health</h1>
+            </div>
+        </div> 
+        
+            @RenderBody()
+
+        <footer class="homefooter">
+            <div class="footercontent">
+                <p class="footer-copywright">&#169; 2020-2021 Recipe for Health Sweden</p>
+                <p class="footer-admin-link">
+                    <a asp-controller="Blogg" asp-action="Admin">
+                        <img alt="Link to admin-page" src="~/images/pill1.png" width="25">
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/js/main.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

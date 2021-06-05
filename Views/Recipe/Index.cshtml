@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Hem";
+}
+@{ Layout = "~/Views/Shared/_FullPageLayout.cshtml"; }
+
+
+
+<div class="firstpage-middle">
+    <section class="quote-section">
+        <h4 class="quote">Three things in life – your health, your mission, and the people you love. That’s it.</h4>
+        <p class="quote-author">-Naval Ravikant</p>
+    </section>
+</div>
+<div class="firstpage-content">
+    <main class="main">
+        <h2 class="latest-products-heading">Senaste produkter</h2>
+        <section class="products firstpage-products">
+            <div class="products-row">
+                <div class="single-product product-one">
+                    <img class="product-img" alt="Image" src="~/images/yoga1.jpg">
+                    <a asp-controller="Recipe" asp-action="Products">
+                        <h3 class="product-heading-new">Yogamatta</h3>
+                    </a>
+                </div>
+                <div class="single-product product-two">
+                    <img class="product-img" alt="Image" src="~/images/capsule1.jpg">
+                    <a asp-controller="Recipe" asp-action="Products">
+                        <h3 class="product-heading-new">D-vitamin</h3>
+                    </a>
+                </div>
+                <div class="single-product product-three">
+                    <img class="product-img" alt="Image" src="~/images/capsules4.jpg">
+                    <a asp-controller="Recipe" asp-action="Products">
+                        <h3 class="product-heading-new">E-vitamin</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
